@@ -16,8 +16,8 @@
       <div class="navigation">
         <ul>
           <li class="list active">
-              <b></b>
-              <b></b>
+            <b></b>
+            <b></b>
             <a class="link" href="#">
               <span class="icon">
                 <ion-icon name="home-outline"></ion-icon>
@@ -87,12 +87,12 @@
           </li>
         </ul>
       </div>
-    <div class="toggle">
+      <div class="toggle">
         <ion-icon name="menu-outline" class="open"></ion-icon>
         <ion-icon name="close-outline" class="close"></ion-icon>
+      </div>
     </div>
-    </div>
-    
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -103,22 +103,24 @@
     ></script>
 
     <script>
-        // add active class in selected list item
-        let list = document.querySelectorAll('.list');
-        for (let i = 0; i <list.length; i++){
-            list[i].onclick = function(){
-                let j=0;
-                while(j<list.length){
-                    list[j++].className = 'list';
-                }
-                list[i].className = 'list active'
-            } 
-        }
-        // togggle
-        let menuToggle = document.querySelector('.toggle')
-        let navigation = document.querySelector('.navigation')
-        menuToggle.onclick = function(){menuToggle.classList.toggle('active');
-  navigation.classList.toggle('activ') }
+      // add active class in selected list item
+      let list = document.querySelectorAll('.list');
+      for (let i = 0; i < list.length; i++) {
+        list[i].onclick = function () {
+          let j = 0;
+          while (j < list.length) {
+            list[j++].className = 'list';
+          }
+          list[i].className = 'list active';
+        };
+      }
+      // togggle
+      let menuToggle = document.querySelector('.toggle');
+      let navigation = document.querySelector('.navigation');
+      menuToggle.onclick = function () {
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('activ');
+      };
     </script>
   </body>
 </html>
